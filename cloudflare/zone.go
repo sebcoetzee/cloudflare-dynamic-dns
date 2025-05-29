@@ -18,7 +18,7 @@ type ListZonesResponse struct {
 }
 
 func (c *client) ListZones(zoneName string) (int, ListZonesResponse, error) {
-	status, responseBody, err := c.httpClient.SendRequest(http.MethodGet, fmt.Sprintf("/zones?type=A&name=%s", zoneName), nil)
+	status, responseBody, err := c.httpClient.SendRequest(http.MethodGet, fmt.Sprintf("/zones?name=%s", zoneName), nil)
 	if err != nil {
 		return 500, ListZonesResponse{}, err
 	}

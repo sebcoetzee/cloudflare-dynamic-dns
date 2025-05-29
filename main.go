@@ -23,7 +23,7 @@ func main() {
 	}
 
 	app := &cli.App{
-		Version: "v0.0.1",
+		Version: "v0.0.2",
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:        "api_token",
